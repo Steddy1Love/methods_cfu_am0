@@ -7,22 +7,23 @@
 # No arguments are passed; downcase has one clear job which is to lowercase all letters that exist in the String
 # The return value is "hello world"
 "Hello World".downcase
-
+#Invoking this method lowercases the string entirely.
 
 "Hello World".include?("Hello")
-
+#Invoking this method checks the string for a particular set of characters and outputs a boolean value.
 
 "Hello World".end_with?("Hello")
-
+#Calling this method checks the string if it ends with a particular set of character and outputs a boolean value.
 
 "Hello World".end_with?("rld")
+#Calling this method checks the string if it ends with a particular set of character and outputs a boolean value.
 
 
 12.even?
-
+#Invoking this method checks the integer to see if it is an even integer and outputs a boolean value
 
 18.next
-
+#Calling this method will read the integer and output the next higher integer once.
 
 
 # SECTION 2: Calling methods on variables assigned to strings.
@@ -39,6 +40,13 @@
 first_name = "Jeff"
 puts first_name.start_with?("J")
 
+#Calling this method will replace the first instance of "man" with fast.
+student_name = "Steddman"
+puts student_name.sub(/man/, 'fast')
+
+#Invoking this method will globally replace vowels with an astrisk.
+teacher_name = "Laura"
+puts teacher_name.gsub(/[aeiou]/, '*')
 
 
 # SECTION 3: Calling methods on variables assigned to integers.
@@ -47,10 +55,21 @@ puts first_name.start_with?("J")
 # https://ruby-doc.org/core-3.1.0/Integer.html
 # Include comments above each method call explaining the impact and return value of that method.
 
-
+# This method, when invoked, converts the integer to a floating point decimal number
+numba1 = 33
+puts numba1.to_f
+# This method, when invoked, finds the greatest common divsor and least common multiple of the integer
+numba2 = 77
+puts numba2.gcdlcm(121)
 
 # SECTION 4: Calling methods on variables assigned to arrays.
 # Declare 2 variables assigned to arrays.
 # Call a different built-in Ruby method on each of your variables. 
 # https://ruby-doc.org/core-3.1.0/Array.html
 # Include comments above each method call explaining the impact and return value of that method.
+
+students = ["Max","Steddman","Cory"]
+puts students.at(0)
+
+price_of_ribeye = [41, 47, 33]
+puts price_of_ribeye.last 
